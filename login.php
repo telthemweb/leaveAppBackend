@@ -1,26 +1,70 @@
-<?php
-   require_once './db/database.php';
-   $ec_number = $_POST['ec_number'];
-   $password = $_POST['password'];
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leave App - Login</title>
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="./css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+  <!-- //''''''''''''''''''''''''''''''Navbar'''''''''''''''''''''''''''' -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-primary">
+  <div class="container">
+  <a class="navbar-brand" href="index.php"><b style="font-size: 20px; font-weight: bold;">Leave</b> <span style="font-size: 20px; color: #c3cc18;font-weight: bold;">App</span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-   $hash = md5($password);
-   $response = array();
-   try {
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+     <ul class="navbar-nav mr-right">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+   
+  </div>
+  </div>
+</nav>
+<!-- //''''''''''''''''''''''''''''''Navbar'''''''''''''''''''''''''''' -->
 
-     $stmt = $conn->prepare('SELECT * FROM users WHERE ec_number = :ec_number && password=:password');
-      $stmt->execute(array(
-					':ec_number' => $ec_number,
-					':password'=>$hash
-					));
+<div class="container telthem-login">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">Login Portal</div>
+        <div class="card-body">
+          <form class="form-signin">
+          <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+          <label for="ec_number" class="sr-only">Ec Number</label>
+          <input type="text" id="ec_number" class="form-control" placeholder="Ec Number" required autofocus><br>
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+      </div>
+      <div class="card-footer">
+       <p class="text-center">Dont have account please click  <a href="#">Signup</a> here ?</p>
+      </div>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+
     
-    $data = $stmt->fetch(PDO::FETCH_ASSOC);
-    if($data == false){
-          $response['message'] = "User not found"
-				}else {
-					echo json_encode($data);
-				}  
-
-	}
-	catch(PDOException $e) {
-				$errMsg = $e->getMessage();
-			} 
+  </div>
+</div>
+</body>
+</html>

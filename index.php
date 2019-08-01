@@ -10,7 +10,7 @@
   
 <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-primary">
   <div class="container">
-  <a class="navbar-brand" href="#"><b style="font-size: 20px; font-weight: bold;">Leave</b> <span style="font-size: 20px; color: #c3cc18;font-weight: bold;">App</span></a>
+  <a class="navbar-brand" href="index.php"><b style="font-size: 20px; font-weight: bold;">Leave</b> <span style="font-size: 20px; color: #c3cc18;font-weight: bold;">App</span></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,7 +20,7 @@
     </ul>
      <ul class="navbar-nav mr-right">
       <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
+        <a class="nav-link" href="login.php">Login</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Contact us</a>
