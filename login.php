@@ -20,7 +20,10 @@
     </ul>
      <ul class="navbar-nav mr-right">
       <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
+        <a class="nav-link" href="login.php">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="register.php">Create Account</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Contact us</a>
@@ -57,7 +60,7 @@
         </form>
       </div>
       <div class="card-footer">
-       <p class="text-center">Dont have account please click  <a href="#">Signup</a> here ?</p>
+       <p class="text-center">Dont have an account please click  <a href="register.php">Signup</a> here ?</p>
       </div>
       </div>
     </div>

@@ -23,6 +23,9 @@
         <a class="nav-link" href="login.php">Login</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="register.php">Create Account</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#">Contact us</a>
       </li>
       <li class="nav-item">
@@ -38,8 +41,8 @@
     <div class="mg-top">
         <h1>Welcome to Mutumba High - Leave Application Portal</h1><br><hr>
         <p>The Mutumba High School began its operations with three Form 1 classes in 1981 in Madziva. Two classrooms, and what would later become the Primary School library, were used for lessons. Assemblies took place in a tent during the rainy season and out in the open air once the rains had passed. That girl is now a parent of one of our pupils.</p>
-        <a class="btn btn-lg btn-primary text-center" href="#" role="button">Login Portal <i class="fa fa-address-cardt"></i></a>
-        <a class="btn btn-lg btn-success text-center" href="#" role="button">Create Account <i class="fa fa-address-cardt"></i></a>
+        <a class="btn btn-lg btn-primary text-center" href="login.php" role="button">Login Portal <i class="fa fa-address-cardt"></i></a>
+        <a class="btn btn-lg btn-success text-center" href="register.php" role="button">Create Account <i class="fa fa-address-cardt"></i></a>
       </div>
   </div>
 </div>   

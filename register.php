@@ -1,75 +1,74 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leave App - Login</title>
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="./css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+  <!-- //''''''''''''''''''''''''''''''Navbar'''''''''''''''''''''''''''' -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-primary">
+  <div class="container">
+  <a class="navbar-brand" href="index.php"><b style="font-size: 20px; font-weight: bold;">Leave</b> <span style="font-size: 20px; color: #c3cc18;font-weight: bold;">App</span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    require_once './inc/database.php';
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+     <ul class="navbar-nav mr-right">
+      <li class="nav-item">
+        <a class="nav-link" href="login.php">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="register.php">Create Account</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+   
+  </div>
+  </div>
+</nav>
+<!-- //''''''''''''''''''''''''''''''Navbar'''''''''''''''''''''''''''' -->
 
-   		$ec_number = $_POST['EC_number'];
-		$emp_fname = $_POST['emp_fname'];
-		$emp_lname = $_POST['emp_lname'];
-		$address = $_POST['address'];
-		$birth_date = $_POST['birth_date'];
-		$emp_sex = $_POST['emp_sex'];
-		$emp_role = $_POST['emp_role'];
-		$password = $_POST['password'];
-		$phone = $_POST['phone'];
-		$email = $_POST['email'];
-		$date_employed = $_POST['date_employed'];
+<div class="container telthem-login">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">Create Account</div>
+        <div class="card-body">
+          <form class="form-signin">
+          	<label for="name" class="sr-only">First Name</label>
+          <input type="text" id="fname" class="form-control" placeholder="First Name" required autofocus><br>
 
-		// 	$ec_number = "0233674D";
-		// $emp_fname ="Innocent";
-		// $emp_lname = "Tauzeni";
-		// $address = "23 Main Street Bindura";
-		// $birth_date = "12-12-1991";
-		// $emp_sex = "Male";
-		// $emp_role = "Teacher";
-		// $password = "123456";
-		// $phone = "0774914150";
-		// $email = "datatelthem@gmail.com";
-		// $date_employed = "12-06-2019";
-		$hash = md5($password);
-		
-	
-try {
-$sqlUser = "SELECT * FROM employees WHERE EC_number = '".$ec_number."'";
+          	<label for="lname" class="sr-only">Last Name</label>
+          <input type="text" id="lname" class="form-control" placeholder="Last Name" required autofocus><br>
 
-$stmt = $conn->prepare($sqlUser);
-$stmt->execute();
-$numUsers = $stmt->rowCount();
+          <label for="ec_number" class="sr-only">Ec Number</label>
+          <input type="text" id="ec_number" class="form-control" placeholder="Ec Number" required autofocus><br>
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required><br>
+         
+          <button class="btn btn-lg btn-success btn-block" type="submit">Create Account</button>
+        </form>
+      </div>
+      <div class="card-footer">
+       <p class="text-center">I have an account please click  <a href="login.php">Sign in</a> here ?</p>
+      </div>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
 
-if($numUsers > 0) {
-	echo (json_encode(array('Errmessage' => 'EC Number already Exist')));
-	exit;
-}
-else{
-	$stmt = $conn->prepare('INSERT INTO employees (EC_number, emp_fname, emp_lname,address, birth_date,emp_sex,emp_role,password,phone,email,date_employed) VALUES (:EC_number, :emp_fname,:emp_lname,:address,:birth_date,:address,:emp_sex,:emp_role,:password,:phone,:email,:date_employed)');
-	
-	$exeQuery=$stmt->execute(array(
-	':EC_number' => $ec_number,
-	':emp_fname' => $emp_fname,
-	':emp_lname' => $emp_lname,
-	':address' => $address,
-	':birth_date' => $birth_date,
-	':address' => $address,
-	':emp_sex' => $emp_sex,
-	':emp_role' => $emp_role,
-	':password' => $hash,
-	':phone' => $phone,
-	':email' => $email,
-	':date_employed' => $date_employed
-	));
-	
-	
-	if($exeQuery){
-		    // $data = $stmt->fetch(PDO::FETCH_ASSOC);
-			echo (json_encode(array('message' => 'User added Successfully')));
-			// echo json_encode($data);
-			} 
-	
-}  
-
-
-
-}catch(PDOException $e) {
-echo $e->getMessage();
-}
-	
-	
+    
+  </div>
+</div>
+</body>
+</html>
