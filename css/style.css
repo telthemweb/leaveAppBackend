@@ -1,0 +1,23 @@
+.navbar-light .navbar-nav .nav-link {
+    color: #fff !important;
+}
+.navbar-brand {
+    color: #fff !important;
+}
+.telthem{
+	background-image: url(../img/2.jpg);
+	min-height: 670px;
+	background-size: cover;
+}
+.mg-top{
+	margin-top: 120px;
+}
+.mg-top h1{
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.mg-top p{
+	color: #fff;
+	text-align: justify-all;
