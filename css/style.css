@@ -26,3 +26,21 @@
 .telthem-login{
 	margin-top: 134px;
 }
+.telthem_card{
+	padding: 16px !important;
+}
+.telthem_footer{
+	padding: 10px !important;
+}
+.telthem_footer h5{
+	color: #fff;
+	margin-left: 23px;
+}
+.telthem_footer ul{
+	list-style: none;
+}
+.telthem_footer a{
+	text-decoration: none;
+	color: #e1e1e1;
+	font-weight:bold;
+}
