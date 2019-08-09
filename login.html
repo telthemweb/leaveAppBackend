@@ -40,6 +40,15 @@
 
 <div class="container telthem-login">
   <div class="row">
+    <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <p class="text-center telthem_error" id="message"></p>
+    <p class="text-center" id="text"></p>
+  </div>
+  <div class="col-md-4"></div>
+  </div>
+  
+  <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
       <div class="card">
@@ -47,15 +56,16 @@
         <div class="card-body">
           <form class="form-signin">
           <label for="ec_number" class="sr-only">Ec Number</label>
-          <input type="text" id="ec_number" class="form-control" placeholder="Ec Number" required autofocus><br>
+          <input type="text" id="ec_number" name="ec_number" class="form-control" placeholder="Ec Number" required autofocus><span> <p class="ec_number_error_text"></p></span><br>
           <label for="inputPassword" class="sr-only">Password</label>
-          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+          <span> <p class="password_error_text"></p></span>
           <div class="checkbox mb-3">
             <label>
-              <input type="checkbox" value="remember-me"> Remember me
+              <input type="checkbox" value="remember-me" id="rememberid" name="rememberid"> Remember me
             </label>
           </div>
-          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+          <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit" >Sign in</button>
         </form>
       </div>
       <div class="card-footer">
@@ -68,5 +78,9 @@
     
   </div>
 </div>
+ <script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.js"></script>
+<script type="text/javascript" src="./js/all.js"></script>
+<script type="text/javascript" src="./js/login.js"></script>
 </body>
 </html>

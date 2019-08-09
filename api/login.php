@@ -7,9 +7,9 @@
    $response = array();
    try {
 
-     $stmt = $conn->prepare('SELECT * FROM employees WHERE EC_number = :EC_number && password=:password');
+     $stmt = $conn->prepare('SELECT * FROM employees WHERE ec_number = :EC_number && password=:password');
       $stmt->execute(array(
-					':EC_number' => $ec_number,
+					':ec_number' => $ec_number,
 					':password'=>$hash
 					));
     

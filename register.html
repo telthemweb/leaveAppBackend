@@ -45,19 +45,47 @@
       <div class="card">
         <div class="card-header">Create Account</div>
         <div class="card-body">
-          <form class="form-signin">
+          <form class="form-signup">
+             <label for="ec_number" class="sr-only">Ec Number</label>
+          <input type="text" id="ec_number" class="form-control" placeholder="Ec Number" required autofocus><br>
+
           	<label for="name" class="sr-only">First Name</label>
           <input type="text" id="fname" class="form-control" placeholder="First Name" required autofocus><br>
 
           	<label for="lname" class="sr-only">Last Name</label>
           <input type="text" id="lname" class="form-control" placeholder="Last Name" required autofocus><br>
 
-          <label for="ec_number" class="sr-only">Ec Number</label>
-          <input type="text" id="ec_number" class="form-control" placeholder="Ec Number" required autofocus><br>
+          <label for="paddress" class="sr-only">Physical Address</label>
+          <input type="text" id="paddress" class="form-control" placeholder="Physical Address" required autofocus><br>
+
+          <label for="dateofbirth" class="sr-only">Date of Birth</label>
+          <input type="date" id="dateofbirth" name="dateofbirth" class="form-control" placeholder="Date of Birth" required autofocus><br>
+
+          <label for="dateofbirth" class="sr-only">Phone Number</label>
+          <input type="number" id="phone" name="phone" class="form-control" placeholder="Phone Number" required autofocus><br>
+
           <label for="inputPassword" class="sr-only">Password</label>
           <input type="password" id="inputPassword" class="form-control" placeholder="Password" required><br>
+
+          <label for="email" class="sr-only">E-mail Address</label>
+          <input type="email" id="email" class="form-control" placeholder="E-mail Address" required><br>
+
+          <label for="gender" class="sr-only">Gender</label>
+          <select class="custom-select">
+          <option selected>Select Gender</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+        </select><br><br>
+        <label for="role" class="sr-only">Select User Role</label>
+          <select class="custom-select">
+          <option selected>Select Your Role</option>
+          <option value="Admin">Administrator</option>
+          <option value="Employee">Employee</option>
+           <option value="HR">Human Resources</option>
+        </select>
+        <p><br></p>
          
-          <button class="btn btn-lg btn-success btn-block" type="submit">Create Account</button>
+          <button class="btn btn-lg btn-success btn-block" type="submit" id="submit_signup">Create Account</button>
         </form>
       </div>
       <div class="card-footer">
