@@ -1,3 +1,4 @@
-  "php.validate.executablePath": "C:\\laragon\\bin\\php\\php-7.2.11-Win32-VC15-x64\\php.exe",
-  "php.executablePath": "C:\\wamp64\\bin\\php\\php-7.2.11-Win32-VC15-x64\\php.exe",
+"php.validate.executablePath": "C:\\laragon\\bin\\php\\php-7.2.11-Win32-VC15-x64\\php.exe",
+"php.executablePath": "C:\\laragon\\bin\\php\\php-7.2.11-Win32-VC15-x64\\php.exe",
+    
     

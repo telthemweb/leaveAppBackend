@@ -1,8 +1,12 @@
 <?php 
 require_once '../inc/database.php';
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	// EC_number password
-		session_start();
+session_start();
+if (isset($_SESSION['ec_number'])) {
+	header('Location: ../employees/index.html');
+	exit();
+}
+if ($_POST['login']) {
+		
 	    $ec_number = $_POST['ec_number'];
         $password =  $_POST['password'];
         $hash = md5($password);
@@ -21,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		}
 		else{
 		echo json_encode($data);
+				// $_SESSION['loggedIn'] = ;
 				$_SESSION['emp_fname'] = $data['emp_fname'];
 				$_SESSION['ec_number'] = $data['ec_number'];
 				header('Location: ../employees/index.html');
